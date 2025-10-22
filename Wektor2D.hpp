@@ -3,30 +3,30 @@ class Wektor2D
 public:
 	Wektor2D()
 	{
-		v1 = 0;
-		v2 = 0;
+		v_x = 0;
+		v_y = 0;
 	}
 	Wektor2D(double x, double y)
 	{
-		v1 = x;
-		v2 = y;
+		v_x = x;
+		v_y = y;
 	}
-	void setX(double variable) { v1 = variable; }
-	void setY(double variable) { v2 = variable; }
-	double getX() { return v1; }
-	double getY() { return v2; }
+	void setX(double variable) { v_x = variable; }
+	void setY(double variable) { v_y = variable; }
+	double getX() { return v_x; }
+	double getY() { return v_y; }
 
 private:
-	double v1;
-	double v2;
+	double v_x;
+	double v_y;
 };
 
-Wektor2D operator+(Wektor2D sk³adnik1, Wektor2D sk³adnik2)
+Wektor2D operator+(Wektor2D skladnik1, Wektor2D skladnik2)
 {
-	return Wektor2D{ sk³adnik1.getX() + sk³adnik2.getX(), sk³adnik1.getY() + sk³adnik2.getY()};
+	return Wektor2D{ skladnik1.getX() + skladnik2.getX(), skladnik1.getY() + skladnik2.getY()};
 }
 
-double operator*(Wektor2D sk³adnik1, Wektor2D sk³adnik2)
+double operator*(Wektor2D skladnik1, Wektor2D skladnik2)
 {
-	return sk³adnik1.getX() * sk³adnik2.getX() + sk³adnik1.getY() * sk³adnik2.getY();
+	return skladnik1.getX() * skladnik2.getX() + skladnik1.getY() * skladnik2.getY();
 }
